@@ -80,14 +80,14 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Framework Classes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/converters.html">Converters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/sequential.html">Sequential</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../stateful/initializers.html">Initializers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/layers.html">Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/norms.html">Norms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/converters.html">Converters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../stateful/optimizers.html">Optimizers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../stateful/module.html">Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/norms.html">Norms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../stateful/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../stateful/sequential.html">Sequential</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Docs</span></p>
 <ul>
@@ -1984,13 +1984,13 @@
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; o = ivy.zeros(3)</span>
+<span class="sd">    &gt;&gt;&gt; o = ivy.zeros(3, dtype=int)</span>
 <span class="sd">    &gt;&gt;&gt; kwargs = {&#39;out&#39;: o, &#39;bias&#39;: ivy.arange(3)}</span>
 <span class="sd">    &gt;&gt;&gt; x = ivy.match_kwargs(kwargs, ivy.elementwise.add, ivy.layers.linear)</span>
 <span class="sd">    &gt;&gt;&gt; print(x)</span>
 <span class="sd">    [{&#39;out&#39;: ivy.array([0, 0, 0])}, {&#39;bias&#39;: ivy.array([0, 1, 2])}]</span>
 
-<span class="sd">    &gt;&gt;&gt; o = ivy.zeros(3)</span>
+<span class="sd">    &gt;&gt;&gt; o = ivy.zeros(3, dtype=int)</span>
 <span class="sd">    &gt;&gt;&gt; kwargs = {&#39;out&#39;: o, &#39;bias&#39;: ivy.arange(3)}</span>
 <span class="sd">    &gt;&gt;&gt; x = ivy.match_kwargs(kwargs, ivy.layers.linear, ivy.elementwise.add)</span>
 <span class="sd">    &gt;&gt;&gt; print(x)</span>
